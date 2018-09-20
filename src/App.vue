@@ -7,8 +7,6 @@
 <style>
 #app {
   font-family: "Karla", sans-serif;
-  height: 100vh;
-  width: 100vw;
 }
 
 body {
@@ -17,8 +15,8 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw;
+  height: 100vh; */
   margin: 0;
   padding: 0;
 }
