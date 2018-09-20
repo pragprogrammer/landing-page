@@ -34,6 +34,14 @@
       <p><strong class="special-text">Full Stack Devloper</strong> who builds things on the internet</p>
       </div>
     </div>
+    <div id="about">
+      <div class="img-holder">
+        <img src="..\assets\biopic.JPG" alt="">
+      </div>
+      <div class="bio">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel debitis temporibus aliquam expedita, saepe eveniet accusantium possimus eos tempora deleniti dolorem cum ex, fugit inventore laboriosam nemo magnam! Et, quae.</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -90,6 +98,22 @@ p {
   color: black;
   text-shadow: 0 0 8px white;
   font-family: "Lobster", cursive;
+}
+
+#about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.img-holder {
+  width: 50%;
+}
+
+.bio {
+  width: 50%;
 }
 </style>
 
