@@ -36,7 +36,7 @@
     </div>
     <div id="about">
       <div class="img-holder">
-        <img src="..\assets\biopic.JPG" alt="">
+        <img class="bio-img" src="..\assets\biopic.jpg" alt="">
       </div>
       <div class="bio">
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel debitis temporibus aliquam expedita, saepe eveniet accusantium possimus eos tempora deleniti dolorem cum ex, fugit inventore laboriosam nemo magnam! Et, quae.</p>
@@ -109,6 +109,11 @@ p {
 }
 
 .img-holder {
+  width: 50%;
+}
+
+.bio-img {
+  height: 50%;
   width: 50%;
 }
 
