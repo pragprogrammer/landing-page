@@ -36,7 +36,7 @@
     </div>
     <div class="inspirational">
       <div class="ins-content">
-        <p><strong class="special-text">Full Stack Developer</strong> who builds things on the Internet</p>
+        <p>I'm Michael Green, a<br><strong class="special-text">Full Stack Developer</strong><br>I builds things on the Internet</p>
       </div>
       <div class="ska">
       <div class="skillsbelow">
@@ -205,12 +205,15 @@ p {
 }
 
 .inspirational {
-  font-size: 1.5rem;
-  background-color: black;
+  font-size: 2rem;
+  background: url("../assets/background1.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   color: white;
   display: flex;
   width: 100%;
-  height: 66vh;
+  height: 75vh;
   /* justify-content: center;
   align-items: center; */
   flex-wrap: wrap;
@@ -223,15 +226,25 @@ p {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 75%;
-  padding: 0.5rem;
+  height: 70%;
+  /* padding: 0.5rem; */
 }
 
 .special-text {
-  font-size: 2rem;
+  font-size: 3rem;
   color: black;
   text-shadow: 0 0 8px white;
   font-family: "Lobster", cursive;
+}
+
+@media (hover: none) {
+  /* .special-text {
+    font-size: 2rem;
+  } */
+  .inspirational {
+    font-size: 1.5rem;
+    height: 95vh;
+  }
 }
 
 .empty-space {
