@@ -40,7 +40,7 @@
       </div>
       <div class="ska">
       <div class="skillsbelow">
-        <p>c:\ npm i Skills</p>
+        <p>C:\ npm i Skills</p>
       </div>
         <div class="arrow bounce"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
     </div>
