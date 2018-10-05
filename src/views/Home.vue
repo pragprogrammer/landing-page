@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <div class="header">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Michael Green</a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#about">Michael Green</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -10,13 +10,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Skills</a>
+              <a class="nav-link" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
+              <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -24,8 +24,8 @@
                 Professional
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#"><i class="fab fa-github"></i> Github</a>
-                <a class="dropdown-item" href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a class="dropdown-item" href="#https://github.com/michaelgreen94"><i class="fab fa-github"></i> Github</a>
+                <a class="dropdown-item" href="#https://www.linkedin.com/in/michael-green-756841b9/"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#"><i class="fas fa-file"></i> Resume</a>
               </div>
@@ -42,11 +42,17 @@
       <div class="skillsbelow">
         <p>C:\ npm i Skills</p>
       </div>
-        <div class="arrow bounce"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></div>
+        <div class="arrow bounce">
+          <a class="nav-link" href="#skills"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></a>
+          </div>
     </div>
       </div>
-    <div class="empty-space">
-      <p>nothing here</p>
+    <div id="skills">
+      <i class="fab fa-html5"></i>
+      <i class="fab fa-vuejs"></i>
+      <i class="fab fa-node-js"></i>
+      <i class="fab fa-css3-alt"></i>
+      <i class="fab fa-js"></i>
     </div>
     <div id="about">
       <div class="img-holder">
@@ -69,6 +75,14 @@
 // @ is an alias to /src
 import Projects from "@/components/Projects.vue";
 
+document.querySelectorAll("a[nav-item]").forEach(a => {
+  a.addEventListener("click", () =>
+    document
+      .querySelector(a.getAttribute("nav-item"))
+      .scrollIntoView({ behavior: "smooth" })
+  );
+});
+
 export default {
   name: "home",
   components: {
@@ -88,6 +102,15 @@ p {
 }
 
 .skillsbelow {
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.507);
+  display: flex;
+  padding-left: 1rem;
+  /* justify-content: center; */
+  text-align: left;
+}
+
+.arrow {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -170,15 +193,13 @@ p {
   height: 30%;
 }
 
-/* .home {
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
-  width: 100%;
-} */
+.ska a {
+  color: white;
+}
 
 .header {
   height: auto;
+  position: fixed;
   width: 100%;
 }
 
@@ -191,7 +212,7 @@ p {
   color: white;
   display: flex;
   width: 100%;
-  height: 75vh;
+  height: 100vh;
   /* justify-content: center;
   align-items: center; */
   flex-wrap: wrap;
@@ -225,14 +246,18 @@ p {
   }
 }
 
-.empty-space {
-  height: 66vh;
+#skills {
+  height: 50vh;
   width: 100%;
-  color: transparent;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* display: none; */
 }
 
 #about {
+  height: 50vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -255,7 +280,11 @@ p {
 
 #contact {
   background-color: #343a40;
-  height: 66vh;
+  height: 100vh;
   width: 100%;
+}
+
+.navbar {
+  padding: 1rem 1rem;
 }
 </style>

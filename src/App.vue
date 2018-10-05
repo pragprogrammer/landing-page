@@ -10,11 +10,11 @@
 }
 
 body {
-  background: url("./assets/background.jpg");
+  /* background: url("./assets/background.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   /* width: 100vw;
   height: 100vh; */
   margin: 0;

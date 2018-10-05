@@ -32,6 +32,11 @@ export default {
 
 
 <style scoped>
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .v-carousel {
   height: 45vh;
   width: 75%;
