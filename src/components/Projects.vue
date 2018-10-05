@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="carousel">
-          <v-carousel hide-delimiters interval=60000>
+          <v-carousel hide-delimiters interval=60000 light>
               <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
       </v-carousel>
     </div>
@@ -38,7 +38,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
 p {
   margin: 0;
 }
@@ -51,6 +51,9 @@ p {
 .v-carousel {
   height: inherit;
   width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel {
@@ -80,12 +83,35 @@ p {
   color: black;
 }
 
-.projectimgs {
+.v-carousel__item {
+  width: 80%;
+}
+
+:global(.v-image__image) {
+  background-size: contain !important;
 }
 
 @media (hover: none) {
   #projects {
     height: 100vh;
+  }
+}
+
+@media (hover: hover) {
+  .projectsheader {
+    height: 100%;
+    width: 50%;
+    padding-top: 0;
+  }
+  .carousel {
+    height: 100%;
+    width: 50%;
+  }
+  #projects {
+    display: flex;
+  }
+  .v-carousel__item {
+    width: 80% !important;
   }
 }
 </style>

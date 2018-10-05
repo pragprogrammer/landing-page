@@ -12,7 +12,7 @@
             <li class="nav-item">
               <a class="nav-link" data-scroll="#skills">Skills</a>
             </li>
-              <li class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" data-scroll="#about">About</a>
             </li>
             <li class="nav-item">
@@ -27,10 +27,13 @@
                 Professional
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="https://github.com/michaelgreen94" target="_blank"><i class="fab fa-github"></i> Github</a>
-                <a class="dropdown-item" href="https://www.linkedin.com/in/michael-green-756841b9/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a class="dropdown-item" href="https://github.com/michaelgreen94" target="_blank"><i class="fab fa-github"></i>
+                  Github</a>
+                <a class="dropdown-item" href="https://www.linkedin.com/in/michael-green-756841b9/" target="_blank"><i
+                    class="fab fa-linkedin"></i> LinkedIn</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://docs.google.com/document/d/1JFKnWHeaH96eqi0OkCwS_i0KjpMfLubLJ6NmRUUMNus/edit" target="_blank"><i class="fas fa-file"></i> Resume</a>
+                <a class="dropdown-item" href="https://docs.google.com/document/d/1JFKnWHeaH96eqi0OkCwS_i0KjpMfLubLJ6NmRUUMNus/edit"
+                  target="_blank"><i class="fas fa-file"></i> Resume</a>
               </div>
             </li>
           </ul>
@@ -40,59 +43,68 @@
     <div id="top"></div>
     <div class="inspirational">
       <div class="ins-content">
-        <p>I'm Michael Green, a<br><strong class="special-text">Full Stack Developer</strong><br>I builds things on the Internet</p>
+        <p>I'm Michael Green, a<br><strong class="special-text">Full Stack Developer</strong><br>I builds things on the
+          Internet</p>
       </div>
       <div class="ska">
-      <div class="skillsbelow">
-        <p>C:\ npm i Skills</p>
-      </div>
+        <div class="skillsbelow">
+          <p>C:\ npm i Skills</p>
+        </div>
         <div class="arrow bounce">
           <a class="nav-link" data-scroll="#skills"><i class="fa fa-angle-down fa-1x" aria-hidden="true"></i></a>
-          </div>
-    </div>
+        </div>
       </div>
+    </div>
     <div id="skills">
       <div class="skills-header">
         <div class="skillsbox">
-        <p>SKILLS</p>
+          <p>SKILLS</p>
         </div>
       </div>
       <div class="skill-icons">
-      <i class="devicon-html5-plain"></i>
-      <i class="devicon-vuejs-plain"></i>
-      <i class="devicon-nodejs-plain"></i>
-      <i class="devicon-css3-plain"></i>
-      <i class="devicon-javascript-plain"></i>
-      <i class="devicon-csharp-line"></i>
-      <i class="devicon-mysql-plain"></i>
-      <i class="devicon-mongodb-plain"></i>
-      <i class="devicon-dot-net-plain-wordmark"></i>
+        <i class="devicon-html5-plain"></i>
+        <i class="devicon-vuejs-plain"></i>
+        <i class="devicon-nodejs-plain"></i>
+        <i class="devicon-css3-plain"></i>
+        <i class="devicon-javascript-plain"></i>
+        <i class="devicon-csharp-line"></i>
+        <i class="devicon-mysql-plain"></i>
+        <i class="devicon-mongodb-plain"></i>
+        <i class="devicon-dot-net-plain-wordmark"></i>
       </div>
     </div>
     <div id="about">
       <div class="about-header">
         <div class="aboutbox">
-        <p>ABOUT</p>
+          <p>ABOUT</p>
         </div>
       </div>
       <div class="about-body">
-      <div class="img-holder">
-        <img class="bio-img" src="..\assets\logo.png" alt="">
-      </div>
-      <div class="bio">
-        <div class="biotext">
-          <p>
-            I'm a Software Developer with over 500 hours of front and back-end development from Boise Codeworks immersed bootcamp.
-            I have A knack for problem solving, and the ability to think outside of the box. My passion for technology led to a career in software development after years of customer service and construction experience. 
-            I'm a highly motivated developer with strong front & back-end development skills.
-          </p>
+        <div class="img-holder">
+          <img class="bio-img" src="..\assets\logo.png" alt="">
+        </div>
+        <div class="bio">
+          <div class="biotext">
+            <p>
+              I'm a Software Developer with over 500 hours of front and back-end development from Boise Codeworks
+              immersed bootcamp.
+              I have A knack for problem solving, and the ability to think outside of the box. My passion for
+              technology led to a career in software development after years of customer service and construction
+              experience.
+              I'm a highly motivated developer with strong front & back-end development skills.
+            </p>
+          </div>
         </div>
       </div>
-      </div>
     </div>
-    <Projects/>
+    <Projects />
     <div id="contact">
-      <p>contact info</p>
+      <div class="about-header">
+        <div class="aboutbox">
+          <p>CONTACT</p>
+        </div>
+      </div>
+      
     </div>
   </div>
 </template>
@@ -129,10 +141,11 @@ export default {
 
 .aboutbox {
   width: fit-content;
-  border: 0.2rem solid black;
+  border: 0.2rem solid white;
   padding: 0.5rem;
-  color: black;
+  color: white;
 }
+
 /* * {
   border: 1px solid red;
 } */
@@ -175,15 +188,18 @@ a:not([href]):not([tabindex]) {
     -moz-transform: translateY(0);
     transform: translateY(0);
   }
+
   40% {
     -moz-transform: translateY(-30px);
     transform: translateY(-30px);
   }
+
   60% {
     -moz-transform: translateY(-15px);
     transform: translateY(-15px);
   }
 }
+
 @-webkit-keyframes bounce {
   0%,
   20%,
@@ -193,15 +209,18 @@ a:not([href]):not([tabindex]) {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   40% {
     -webkit-transform: translateY(-30px);
     transform: translateY(-30px);
   }
+
   60% {
     -webkit-transform: translateY(-15px);
     transform: translateY(-15px);
   }
 }
+
 @keyframes bounce {
   0%,
   20%,
@@ -213,12 +232,14 @@ a:not([href]):not([tabindex]) {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   40% {
     -moz-transform: translateY(-30px);
     -ms-transform: translateY(-30px);
     -webkit-transform: translateY(-30px);
     transform: translateY(-30px);
   }
+
   60% {
     -moz-transform: translateY(-15px);
     -ms-transform: translateY(-15px);
@@ -344,7 +365,7 @@ a:not([href]):not([tabindex]) {
   /* display: flex;
   justify-content: center;
   align-items: center; */
-  background-color: #343a40;
+  background-color: black;
 }
 
 .about-header {
@@ -385,7 +406,7 @@ a:not([href]):not([tabindex]) {
 .biotext {
   width: 75%;
   height: 75%;
-  background-color: black;
+  /* background-color: black; */
   color: white;
   padding: 1rem;
   display: flex;
@@ -396,9 +417,13 @@ a:not([href]):not([tabindex]) {
 }
 
 #contact {
-  background-color: #343a40;
-  height: 100vh;
+  height: 95vh;
   width: 100%;
+  flex-wrap: wrap;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background-color: black;
 }
 
 .arrow i {
@@ -412,10 +437,12 @@ a:not([href]):not([tabindex]) {
   .skill-icons {
     font-size: 8rem;
   }
+
   .inspirational {
     font-size: 1.5rem;
     height: 100vh;
   }
+
   .img-holder {
     height: 40%;
     width: 100%;
@@ -423,23 +450,28 @@ a:not([href]):not([tabindex]) {
     justify-content: center;
     align-items: center;
   }
+
   .bio-img {
     height: 15rem;
     width: 15rem;
   }
+
   .bio {
     height: 55%;
     width: 100%;
   }
+
   .biotext {
     height: 100%;
     width: 90%;
     font-size: 1.2rem;
     font-family: "Roboto", sans-serif;
   }
+
   #skills {
     height: 100vh;
   }
+
   #about {
     height: 100vh;
   }
