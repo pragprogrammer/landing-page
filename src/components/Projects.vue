@@ -7,9 +7,7 @@
     </div>
     <div class="carousel">
           <v-carousel hide-delimiters interval=60000>
-            <div class="projectimgs">
               <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
-            </div>
       </v-carousel>
     </div>
   </div>
@@ -45,7 +43,7 @@ p {
   margin: 0;
 }
 #projects {
-  height: 100vh;
+  height: 70vh;
   width: 100%;
   flex-wrap: wrap;
   background-color: white;
