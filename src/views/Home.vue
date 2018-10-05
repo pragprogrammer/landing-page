@@ -58,11 +58,7 @@
           quae.</p>
       </div>
     </div>
-    <div class="carasouelbackground">
-      <v-carousel id="projects">
-        <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
-      </v-carousel>
-    </div>
+    <Projects/>
     <div id="contact">
       <p>contact info</p>
     </div>
@@ -77,24 +73,6 @@ export default {
   name: "home",
   components: {
     Projects
-  },
-  data() {
-    return {
-      items: [
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg"
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg"
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg"
-        },
-        {
-          src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg"
-        }
-      ]
-    };
   },
   methods: {}
 };
@@ -252,11 +230,6 @@ p {
   width: 100%;
   color: transparent;
   /* display: none; */
-}
-
-.v-carousel {
-  height: 45vh;
-  width: 75%;
 }
 
 #about {
