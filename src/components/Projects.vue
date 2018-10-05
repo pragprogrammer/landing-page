@@ -40,5 +40,6 @@ export default {
 .v-carousel {
   height: 45vh;
   width: 75%;
+  /* z-index: -1; */
 }
 </style>

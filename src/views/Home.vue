@@ -48,20 +48,30 @@
     </div>
       </div>
     <div id="skills">
+      <div class="skills-header">
+        <p>SKILLS</p>
+      </div>
+      <div class="skill-icons">
       <i class="fab fa-html5"></i>
       <i class="fab fa-vuejs"></i>
       <i class="fab fa-node-js"></i>
       <i class="fab fa-css3-alt"></i>
       <i class="fab fa-js"></i>
+      </div>
     </div>
     <div id="about">
+      <div class="about-header">
+        <p>ABOUT</p>
+      </div>
+      <div class="about-body">
       <div class="img-holder">
-        <!-- <img class="bio-img" src="..\assets\biopic.jpg" alt=""> -->
+        <img class="bio-img" src="..\assets\logo.png" alt="">
       </div>
       <div class="bio">
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel debitis temporibus aliquam expedita, saepe
           eveniet accusantium possimus eos tempora deleniti dolorem cum ex, fugit inventore laboriosam nemo magnam! Et,
           quae.</p>
+      </div>
       </div>
     </div>
     <Projects/>
@@ -100,6 +110,8 @@ export default {
 p {
   margin: 0;
 }
+
+/* arrow css */
 
 .skillsbelow {
   width: 70%;
@@ -197,11 +209,20 @@ p {
   color: white;
 }
 
+/* header */
+
 .header {
   height: auto;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
+
+.navbar {
+  padding: 1rem 1rem;
+}
+
+/* hero body */
 
 .inspirational {
   font-size: 2rem;
@@ -212,7 +233,7 @@ p {
   color: white;
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   /* justify-content: center;
   align-items: center; */
   flex-wrap: wrap;
@@ -240,41 +261,95 @@ p {
   /* .special-text {
     font-size: 2rem;
   } */
+  .skill-icons {
+    font-size: 8rem;
+  }
   .inspirational {
     font-size: 1.5rem;
-    height: 95vh;
+    height: 100vh;
   }
 }
+
+/* skills */
 
 #skills {
   height: 50vh;
   width: 100%;
   background-color: grey;
+  flex-wrap: wrap;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* display: none; */
+}
+
+.skills-header {
+  width: 100%;
+  height: 20%;
+  font-size: 2rem;
+  font-weight: 800;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* display: none; */
 }
+
+.skill-icons {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 10rem;
+}
+
+/* about */
 
 #about {
   height: 50vh;
   width: 100%;
-  display: flex;
+  flex-wrap: wrap;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   background-color: #343a40;
 }
 
+.about-header {
+  width: 100%;
+  height: 20%;
+  font-size: 2rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-body {
+  height: 80%;
+  width: 100%;
+  display: flex;
+}
+
 .img-holder {
+  height: 100%;
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bio-img {
-  height: 50%;
-  width: 50%;
+  height: 75%;
+  width: 75%;
 }
 
 .bio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   width: 50%;
 }
 
@@ -282,9 +357,5 @@ p {
   background-color: #343a40;
   height: 100vh;
   width: 100%;
-}
-
-.navbar {
-  padding: 1rem 1rem;
 }
 </style>
