@@ -88,7 +88,7 @@
             <p>
               I'm a Software Developer with over 500 hours of front and back-end development from Boise Codeworks
               immersed bootcamp.
-              I have A knack for problem solving, and the ability to think outside of the box. My passion for
+              I have A knack for problem solving, and the ability to think outside of the box. <br/> <br/> My passion for
               technology led to a career in software development after years of customer service and construction
               experience.
               I'm a highly motivated developer with strong front & back-end development skills.
@@ -104,7 +104,12 @@
           <p>CONTACT</p>
         </div>
       </div>
-      
+      <div class="contact-body">
+        <p>form here</p>
+      </div>
+      <div class="contact-footer">
+        <p>© 2018 Michael L. Green</p>
+      </div>
     </div>
   </div>
 </template>
@@ -291,7 +296,7 @@ a:not([href]):not([tabindex]) {
   color: white;
   display: flex;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   /* justify-content: center;
   align-items: center; */
   flex-wrap: wrap;
@@ -416,8 +421,12 @@ a:not([href]):not([tabindex]) {
   font-size: 1.5rem;
 }
 
+.arrow i {
+  color: white;
+}
+
 #contact {
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   flex-wrap: wrap;
   /* display: flex;
@@ -426,8 +435,19 @@ a:not([href]):not([tabindex]) {
   background-color: black;
 }
 
-.arrow i {
+.contact-body {
   color: white;
+  height: 75%;
+}
+
+.contact-footer {
+  color: black;
+  height: 5%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
 }
 
 @media (hover: none) {
@@ -437,12 +457,10 @@ a:not([href]):not([tabindex]) {
   .skill-icons {
     font-size: 8rem;
   }
-
   .inspirational {
     font-size: 1.5rem;
     height: 100vh;
   }
-
   .img-holder {
     height: 40%;
     width: 100%;
@@ -450,30 +468,28 @@ a:not([href]):not([tabindex]) {
     justify-content: center;
     align-items: center;
   }
-
   .bio-img {
     height: 15rem;
     width: 15rem;
   }
-
   .bio {
     height: 55%;
     width: 100%;
   }
-
   .biotext {
     height: 100%;
     width: 90%;
     font-size: 1.2rem;
     font-family: "Roboto", sans-serif;
   }
-
   #skills {
     height: 100vh;
   }
-
   #about {
     height: 100vh;
+  }
+  p {
+    padding-bottom: 0;
   }
 }
 </style>

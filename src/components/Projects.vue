@@ -42,6 +42,7 @@ export default {
 p {
   margin: 0;
 }
+
 #projects {
   height: 70vh;
   width: 100%;
@@ -56,18 +57,9 @@ p {
   align-items: center;
 }
 
-.carousel {
-  height: 80%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: contain;
-}
-
 .projectsheader {
-  width: 100%;
   height: 20%;
+  width: 100%;
   font-size: 2rem;
   font-weight: 800;
   display: flex;
@@ -76,6 +68,14 @@ p {
   padding-top: 1rem;
 }
 
+.carousel {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+}
 .projectbox {
   width: fit-content;
   border: 0.2rem solid black;
@@ -84,7 +84,7 @@ p {
 }
 
 .v-carousel__item {
-  width: 80%;
+  width: 80% !important;
 }
 
 :global(.v-image__image) {
@@ -95,12 +95,15 @@ p {
   #projects {
     height: 100vh;
   }
+  p {
+    margin-bottom: 0 !important;
+  }
 }
 
 @media (hover: hover) {
   .projectsheader {
     height: 100%;
-    width: 50%;
+    width: 40%;
     padding-top: 0;
   }
   .carousel {
@@ -112,6 +115,9 @@ p {
   }
   .v-carousel__item {
     width: 80% !important;
+  }
+  p {
+    margin-bottom: 0 !important;
   }
 }
 </style>
