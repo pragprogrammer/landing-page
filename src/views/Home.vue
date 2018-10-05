@@ -30,7 +30,7 @@
                 <a class="dropdown-item" href="https://github.com/michaelgreen94" target="_blank"><i class="fab fa-github"></i> Github</a>
                 <a class="dropdown-item" href="https://www.linkedin.com/in/michael-green-756841b9/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://docs.google.com/document/d/1JFKnWHeaH96eqi0OkCwS_i0KjpMfLubLJ6NmRUUMNus/edit?usp=sharing" target="_blank"><i class="fas fa-file"></i> Resume</a>
+                <a class="dropdown-item" href="https://docs.google.com/document/d/1JFKnWHeaH96eqi0OkCwS_i0KjpMfLubLJ6NmRUUMNus/edit" target="_blank"><i class="fas fa-file"></i> Resume</a>
               </div>
             </li>
           </ul>
@@ -58,11 +58,15 @@
         </div>
       </div>
       <div class="skill-icons">
-      <i class="fab fa-html5"></i>
-      <i class="fab fa-vuejs"></i>
-      <i class="fab fa-node-js"></i>
-      <i class="fab fa-css3-alt"></i>
-      <i class="fab fa-js"></i>
+      <i class="devicon-html5-plain"></i>
+      <i class="devicon-vuejs-plain"></i>
+      <i class="devicon-nodejs-plain"></i>
+      <i class="devicon-css3-plain"></i>
+      <i class="devicon-javascript-plain"></i>
+      <i class="devicon-csharp-line"></i>
+      <i class="devicon-mysql-plain"></i>
+      <i class="devicon-mongodb-plain"></i>
+      <i class="devicon-dot-net-plain-wordmark"></i>
       </div>
     </div>
     <div id="about">
@@ -77,9 +81,11 @@
       </div>
       <div class="bio">
         <div class="biotext">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel debitis temporibus aliquam expedita, saepe
-          eveniet accusantium possimus eos tempora deleniti dolorem cum ex, fugit inventore laboriosam nemo magnam! Et,
-          quae.</p>
+          <p>
+            I'm a Software Developer with over 500 hours of front and back-end development from Boise Codeworks immersed bootcamp.
+            I have A knack for problem solving, and the ability to think outside of the box. My passion for technology led to a career in software development after years of customer service and construction experience. 
+            I'm a highly motivated developer with strong front & back-end development skills.
+          </p>
         </div>
       </div>
       </div>
@@ -119,7 +125,6 @@ export default {
   border: 0.2rem solid black;
   padding: 0.5rem;
   color: black;
-  background-color: white;
 }
 
 .aboutbox {
@@ -127,7 +132,6 @@ export default {
   border: 0.2rem solid black;
   padding: 0.5rem;
   color: black;
-  background-color: white;
 }
 /* * {
   border: 1px solid red;
@@ -245,15 +249,15 @@ a:not([href]):not([tabindex]) {
 /* header */
 
 .header {
-  height: 10vh;
+  /* height: 10vh; */
   position: fixed;
   width: 100%;
   z-index: 1;
 }
 
-.navbar {
+/* .navbar {
   padding: 1rem 1rem;
-}
+} */
 
 /* hero body */
 
@@ -300,9 +304,9 @@ a:not([href]):not([tabindex]) {
 /* skills */
 
 #skills {
-  height: 50vh;
+  height: 70vh;
   width: 100%;
-  background-color: grey;
+  background-color: white;
   flex-wrap: wrap;
   /* display: flex;
   justify-content: center;
@@ -318,6 +322,7 @@ a:not([href]):not([tabindex]) {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 1rem;
 }
 
 .skill-icons {
@@ -333,7 +338,7 @@ a:not([href]):not([tabindex]) {
 /* about */
 
 #about {
-  height: 50vh;
+  height: 70vh;
   width: 100%;
   flex-wrap: wrap;
   /* display: flex;
@@ -350,17 +355,19 @@ a:not([href]):not([tabindex]) {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 1rem;
 }
 
 .about-body {
   height: 80%;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .img-holder {
   height: 100%;
-  width: 50%;
+  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -372,14 +379,20 @@ a:not([href]):not([tabindex]) {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 50%;
+  width: 70%;
 }
 
 .biotext {
+  width: 75%;
+  height: 75%;
   background-color: black;
   color: white;
-  padding: 0.5rem;
-  margin: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  font-size: 1.5rem;
 }
 
 #contact {
@@ -396,16 +409,33 @@ a:not([href]):not([tabindex]) {
   /* .special-text {
     font-size: 2rem;
   } */
-  /* .skill-icons {
-    font-size: 10rem;
-  } */
+  .skill-icons {
+    font-size: 8rem;
+  }
   .inspirational {
     font-size: 1.5rem;
     height: 100vh;
   }
+  .img-holder {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .bio-img {
     height: 15rem;
     width: 15rem;
+  }
+  .bio {
+    height: 55%;
+    width: 100%;
+  }
+  .biotext {
+    height: 100%;
+    width: 90%;
+    font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
   }
   #skills {
     height: 100vh;

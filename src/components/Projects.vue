@@ -1,13 +1,15 @@
 <template>
-  <div class="projects">
+  <div id="projects">
     <div class="projectsheader">
       <div class="projectbox">
         <p>PROJECTS</p>
         </div>
     </div>
     <div class="carousel">
-          <v-carousel id="projects" hide-delimiters=true>
-        <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
+          <v-carousel hide-delimiters interval=60000>
+            <div class="projectimgs">
+              <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
+            </div>
       </v-carousel>
     </div>
   </div>
@@ -20,7 +22,7 @@ export default {
     return {
       items: [
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg"
+          src: "../assets/bullutin.png"
         },
         {
           src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg"
@@ -42,11 +44,11 @@ export default {
 p {
   margin: 0;
 }
-.projects {
-  height: 50vh;
+#projects {
+  height: 100vh;
   width: 100%;
   flex-wrap: wrap;
-  background-color: grey;
+  background-color: white;
 }
 .v-carousel {
   height: inherit;
@@ -59,6 +61,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-size: contain;
 }
 
 .projectsheader {
@@ -69,6 +72,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 1rem;
 }
 
 .projectbox {
@@ -76,11 +80,13 @@ p {
   border: 0.2rem solid black;
   padding: 0.5rem;
   color: black;
-  background-color: white;
+}
+
+.projectimgs {
 }
 
 @media (hover: none) {
-  .projects {
+  #projects {
     height: 100vh;
   }
 }
