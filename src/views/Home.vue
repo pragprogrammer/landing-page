@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <div class="header">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#about">Michael Green</a>
+      <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand nav-link" data-scroll="#top">Michael Green</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -10,30 +10,34 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
+              <a class="nav-link" data-scroll="#skills">Skills</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link" data-scroll="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#projects">Projects</a>
+              <a class="nav-link" data-scroll="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+              <a class="nav-link" data-scroll="#contact">Contact</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              <a class="nav-link dropdown-toggle" data-scroll="#app" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Professional
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#https://github.com/michaelgreen94"><i class="fab fa-github"></i> Github</a>
-                <a class="dropdown-item" href="#https://www.linkedin.com/in/michael-green-756841b9/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a class="dropdown-item" href="https://github.com/michaelgreen94" target="_blank"><i class="fab fa-github"></i> Github</a>
+                <a class="dropdown-item" href="https://www.linkedin.com/in/michael-green-756841b9/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="fas fa-file"></i> Resume</a>
+                <a class="dropdown-item" href="https://docs.google.com/document/d/1JFKnWHeaH96eqi0OkCwS_i0KjpMfLubLJ6NmRUUMNus/edit?usp=sharing" target="_blank"><i class="fas fa-file"></i> Resume</a>
               </div>
             </li>
           </ul>
         </div>
       </nav>
     </div>
+    <div id="top"></div>
     <div class="inspirational">
       <div class="ins-content">
         <p>I'm Michael Green, a<br><strong class="special-text">Full Stack Developer</strong><br>I builds things on the Internet</p>
@@ -43,13 +47,15 @@
         <p>C:\ npm i Skills</p>
       </div>
         <div class="arrow bounce">
-          <a class="nav-link" href="#skills"><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i></a>
+          <a class="nav-link" data-scroll="#skills"><i class="fa fa-angle-down fa-1x" aria-hidden="true"></i></a>
           </div>
     </div>
       </div>
     <div id="skills">
       <div class="skills-header">
+        <div class="skillsbox">
         <p>SKILLS</p>
+        </div>
       </div>
       <div class="skill-icons">
       <i class="fab fa-html5"></i>
@@ -61,16 +67,20 @@
     </div>
     <div id="about">
       <div class="about-header">
+        <div class="aboutbox">
         <p>ABOUT</p>
+        </div>
       </div>
       <div class="about-body">
       <div class="img-holder">
         <img class="bio-img" src="..\assets\logo.png" alt="">
       </div>
       <div class="bio">
+        <div class="biotext">
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel debitis temporibus aliquam expedita, saepe
           eveniet accusantium possimus eos tempora deleniti dolorem cum ex, fugit inventore laboriosam nemo magnam! Et,
           quae.</p>
+        </div>
       </div>
       </div>
     </div>
@@ -85,30 +95,52 @@
 // @ is an alias to /src
 import Projects from "@/components/Projects.vue";
 
-document.querySelectorAll("a[nav-item]").forEach(a => {
-  a.addEventListener("click", () =>
-    document
-      .querySelector(a.getAttribute("nav-item"))
-      .scrollIntoView({ behavior: "smooth" })
-  );
-});
-
 export default {
   name: "home",
   components: {
     Projects
   },
-  methods: {}
+  methods: {},
+  mounted() {
+    document.querySelectorAll(".nav-link").forEach(a => {
+      a.addEventListener("click", () =>
+        document
+          .querySelector(a.getAttribute("data-scroll"))
+          .scrollIntoView({ behavior: "smooth" })
+      );
+    });
+  }
 };
 </script>
 
 <style scoped>
+.skillsbox {
+  width: fit-content;
+  border: 0.2rem solid black;
+  padding: 0.5rem;
+  color: black;
+  background-color: white;
+}
+
+.aboutbox {
+  width: fit-content;
+  border: 0.2rem solid black;
+  padding: 0.5rem;
+  color: black;
+  background-color: white;
+}
 /* * {
   border: 1px solid red;
 } */
 
 p {
   margin: 0;
+}
+
+a:not([href]):not([tabindex]) {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* arrow css */
@@ -127,6 +159,7 @@ p {
   display: flex;
   justify-content: center;
   align-content: center;
+  color: white !important;
 }
 
 @-moz-keyframes bounce {
@@ -212,7 +245,7 @@ p {
 /* header */
 
 .header {
-  height: auto;
+  height: 10vh;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -233,7 +266,7 @@ p {
   color: white;
   display: flex;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   /* justify-content: center;
   align-items: center; */
   flex-wrap: wrap;
@@ -257,17 +290,11 @@ p {
   font-family: "Lobster", cursive;
 }
 
-@media (hover: none) {
-  /* .special-text {
-    font-size: 2rem;
-  } */
-  .skill-icons {
-    font-size: 8rem;
-  }
-  .inspirational {
-    font-size: 1.5rem;
-    height: 100vh;
-  }
+.bio-img {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  background-color: black;
 }
 
 /* skills */
@@ -339,11 +366,6 @@ p {
   align-items: center;
 }
 
-.bio-img {
-  height: 75%;
-  width: 75%;
-}
-
 .bio {
   display: flex;
   flex-wrap: wrap;
@@ -353,9 +375,43 @@ p {
   width: 50%;
 }
 
+.biotext {
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
 #contact {
   background-color: #343a40;
   height: 100vh;
   width: 100%;
+}
+
+.arrow i {
+  color: white;
+}
+
+@media (hover: none) {
+  /* .special-text {
+    font-size: 2rem;
+  } */
+  /* .skill-icons {
+    font-size: 10rem;
+  } */
+  .inspirational {
+    font-size: 1.5rem;
+    height: 100vh;
+  }
+  .bio-img {
+    height: 15rem;
+    width: 15rem;
+  }
+  #skills {
+    height: 100vh;
+  }
+  #about {
+    height: 100vh;
+  }
 }
 </style>
