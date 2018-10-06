@@ -1,5 +1,5 @@
 module.exports = {
-  baseUrl: '/michaelgreen94.github.io/',
+  baseUrl: '/',
   outputDir: 'docs',
   assetsDir: './'
 }
