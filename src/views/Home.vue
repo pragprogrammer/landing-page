@@ -115,6 +115,9 @@
             </form>
         </div>
       </div>
+        <div class="backtotop">
+          <a class="nav-link btop" data-scroll="#top">TOP</a>
+        </div>
       <div class="contact-footer">
         <p>© 2018 Michael L. Green</p>
       </div>
@@ -149,6 +152,27 @@ export default {
 </script>
 
 <style scoped>
+.backtotop {
+  position: fixed;
+  bottom: 3rem;
+  right: 5rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.btop {
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  font-weight: 900;
+}
+
 .skillsbox {
   width: fit-content;
   border: 0.2rem solid black;
@@ -510,7 +534,7 @@ textarea {
   font-size: 1.5rem;
 }
 
-@media (hover: none) {
+@media (max-width: 768px) {
   /* .special-text {
     font-size: 2rem;
   } */
@@ -550,6 +574,12 @@ textarea {
   }
   p {
     padding-bottom: 0;
+  }
+  .backtotop {
+    bottom: 2rem;
+    right: 2rem;
+    height: 3rem;
+    width: 3rem;
   }
 }
 </style>

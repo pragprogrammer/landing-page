@@ -91,7 +91,7 @@ p {
   background-size: contain !important;
 }
 
-@media (hover: none) {
+@media (max-width: 768px) {
   #projects {
     height: 100vh;
   }
