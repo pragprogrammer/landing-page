@@ -64,8 +64,8 @@ p {
   font-weight: 800;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-top: 1rem;
+  align-items: flex-end;
+  padding-bottom: 0.5rem;
 }
 
 .carousel {
@@ -84,7 +84,7 @@ p {
 }
 
 .v-carousel__item {
-  width: 80% !important;
+  width: 70% !important;
 }
 
 :global(.v-image__image) {
@@ -105,6 +105,8 @@ p {
     height: 100%;
     width: 40%;
     padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
   }
   .carousel {
     height: 100%;

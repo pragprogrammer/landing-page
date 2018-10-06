@@ -99,13 +99,21 @@
     </div>
     <Projects />
     <div id="contact">
-      <div class="about-header">
+      <div class="contact-header">
         <div class="aboutbox">
           <p>CONTACT</p>
         </div>
       </div>
       <div class="contact-body">
-        <p>form here</p>
+        <div class="contact-me">
+            <form method="POST" class="contact-form" :action="formSpreeTarget">
+                <input type="text" placeholder="NAME" name="name"/>
+                <input type="text" placeholder="YOUR EMAIL" name="_replyto">
+                <input type="text" placeholder="SUBJECT" name="subject" required />
+                <textarea type="text" placeholder="CONTENT" name="content" required></textarea>
+                <button type="submit" class="btn btn-dark">SEND</button>
+            </form>
+        </div>
       </div>
       <div class="contact-footer">
         <p>© 2018 Michael L. Green</p>
@@ -117,9 +125,13 @@
 <script>
 // @ is an alias to /src
 import Projects from "@/components/Projects.vue";
-
 export default {
   name: "home",
+  data() {
+    return {
+      formSpreeTarget: "https://formspree.io/michael.green94@hotmail.com"
+    };
+  },
   components: {
     Projects
   },
@@ -347,8 +359,8 @@ a:not([href]):not([tabindex]) {
   font-weight: 800;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-top: 1rem;
+  align-items: flex-end;
+  padding-bottom: 0.5rem;
 }
 
 .skill-icons {
@@ -380,8 +392,8 @@ a:not([href]):not([tabindex]) {
   font-weight: 800;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-top: 1rem;
+  align-items: flex-end;
+  padding-bottom: 0.5rem;
 }
 
 .about-body {
@@ -389,6 +401,17 @@ a:not([href]):not([tabindex]) {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+}
+
+.contact-header {
+  width: 100%;
+  height: 20%;
+  font-size: 2rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 0.5rem;
 }
 
 .img-holder {
@@ -438,6 +461,43 @@ a:not([href]):not([tabindex]) {
 .contact-body {
   color: white;
   height: 75%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 50%;
+  /* background-color: #f5f5f5; */
+  color: black;
+}
+
+.contact-form {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin: 1.5rem 0;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid grey;
+  color: white;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 2px;
 }
 
 .contact-footer {
@@ -447,7 +507,7 @@ a:not([href]):not([tabindex]) {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 @media (hover: none) {
@@ -469,8 +529,8 @@ a:not([href]):not([tabindex]) {
     align-items: center;
   }
   .bio-img {
-    height: 15rem;
-    width: 15rem;
+    height: 13rem;
+    width: 13rem;
   }
   .bio {
     height: 55%;
@@ -479,7 +539,7 @@ a:not([href]):not([tabindex]) {
   .biotext {
     height: 100%;
     width: 90%;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: "Roboto", sans-serif;
   }
   #skills {
