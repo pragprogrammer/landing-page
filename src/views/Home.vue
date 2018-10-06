@@ -111,7 +111,7 @@
                 <input type="text" placeholder="YOUR EMAIL" name="_replyto">
                 <input type="text" placeholder="SUBJECT" name="subject" required />
                 <textarea type="text" placeholder="CONTENT" name="content" required></textarea>
-                <button type="submit" class="btn btn-dark">SEND</button>
+                <button type="submit" class="form-button">SEND</button>
             </form>
         </div>
       </div>
@@ -495,8 +495,8 @@ a:not([href]):not([tabindex]) {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50%;
-  width: 50%;
+  height: 70%;
+  width: 70%;
   /* background-color: #f5f5f5; */
   color: black;
 }
@@ -508,13 +508,34 @@ a:not([href]):not([tabindex]) {
   width: 100%;
 }
 
-input,
-textarea {
+.form-button {
+  width: 100%;
+  border: none;
+  background-color: grey;
+  color: white;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 0.9375rem;
+  height: 2.5rem;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+input {
   width: 100%;
   margin: 1.5rem 0;
   background: rgba(0, 0, 0, 0);
   border: none;
   border-bottom: 1px solid grey;
+  color: white;
+}
+
+textarea {
+  width: 100%;
+  margin: 1.5rem 0;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid grey;
   color: white;
 }
 
