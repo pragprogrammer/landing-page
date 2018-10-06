@@ -1,4 +1,4 @@
 module.exports = {
-  baseUrl: './',
+  baseUrl: '/michaelgreen94.github.io/',
   outputDir: 'master branch'
 }
