@@ -1,4 +1,4 @@
 module.exports = {
   baseUrl: './',
-  outputDir: 'docs'
+  outputDir: 'master branch'
 }
