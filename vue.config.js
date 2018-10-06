@@ -1,5 +1,4 @@
 module.exports = {
-  baseUrl: '/',
-  outputDir: 'docs',
-  assetsDir: './'
+  baseUrl: './',
+  outputDir: 'docs'
 }
