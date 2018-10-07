@@ -116,7 +116,7 @@
         </div>
       </div>
         <div class="backtotop">
-          <a class="nav-link btop" data-scroll="#top">TOP</a>
+          <a class="nav-link btop" data-scroll="#top"><i class="fas fa-angle-double-up"></i></a>
         </div>
       <div class="contact-footer">
         <p>© 2018 Michael L. Green</p>
@@ -147,6 +147,12 @@ export default {
           .scrollIntoView({ behavior: "smooth" })
       );
     });
+    $(window).scroll(function() {
+      $(".arrow").css("opacity", 1 - $(window).scrollTop() / 250);
+    });
+    $(window).scroll(function() {
+      $(".btop").css("opacity", 0 + $(window).scrollTop() / 250);
+    });
   }
 };
 </script>
@@ -162,15 +168,16 @@ export default {
 
 .btop {
   color: black;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.39);
   border-radius: 50%;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   font-weight: 900;
+  font-size: 1.5rem;
 }
 
 .skillsbox {
@@ -392,7 +399,7 @@ a:not([href]):not([tabindex]) {
   height: 80%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   font-size: 10rem;
 }
