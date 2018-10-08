@@ -81,8 +81,9 @@
       </div>
       <div class="about-body">
         <div class="img-holder">
-          <img class="bio-img" src="..\assets\logo.png" alt="">
-        </div>
+          <div class="bio-img">
+          </div>
+          </div>
         <div class="bio">
           <div class="biotext">
             <p>
@@ -371,13 +372,6 @@ a:not([href]):not([tabindex]) {
   font-family: "Lobster", cursive;
 }
 
-.bio-img {
-  height: 20rem;
-  width: 20rem;
-  border-radius: 50%;
-  background-color: black;
-}
-
 /* skills */
 
 #skills {
@@ -468,6 +462,16 @@ a:not([href]):not([tabindex]) {
   align-items: center;
   height: 100%;
   width: 70%;
+}
+
+.bio-img {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  background: url("../assets/biopic2.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .biotext {
