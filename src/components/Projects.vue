@@ -20,7 +20,7 @@ export default {
     return {
       items: [
         {
-          src: "../assets/bullutin.png"
+          src: "../assets/bullutinfullscreen.png"
         },
         {
           src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg"
@@ -40,7 +40,7 @@ export default {
 
 <style>
 p {
-  margin: 0;
+  margin-bottom: 0;
 }
 
 #projects {
@@ -48,6 +48,7 @@ p {
   width: 100%;
   flex-wrap: wrap;
   background-color: white;
+  display: flex;
 }
 .v-carousel {
   height: inherit;
@@ -57,20 +58,9 @@ p {
   align-items: center;
 }
 
-.projectsheader {
-  height: 20%;
-  width: 100%;
-  font-size: 2rem;
-  font-weight: 800;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 0.5rem;
-}
-
 .carousel {
-  height: 80%;
-  width: 100%;
+  height: 100%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,11 +74,23 @@ p {
 }
 
 .v-carousel__item {
-  width: 70% !important;
+  width: 80% !important;
 }
 
 :global(.v-image__image) {
   background-size: contain !important;
+}
+
+.projectsheader {
+  height: 100%;
+  width: 40%;
+  font-size: 2rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 @media (max-width: 768px) {
@@ -98,28 +100,30 @@ p {
   p {
     margin-bottom: 0 !important;
   }
-}
-
-@media (hover: hover) {
   .projectsheader {
-    height: 100%;
-    width: 40%;
-    padding-top: 0;
-    padding-bottom: 0;
-    align-items: center;
+    height: 20%;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0.5rem;
   }
   .carousel {
-    height: 100%;
-    width: 50%;
-  }
-  #projects {
+    height: 80%;
+    width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
   }
   .v-carousel__item {
-    width: 80% !important;
+    width: 90% !important;
   }
-  p {
-    margin-bottom: 0 !important;
+
+  :global(.v-image__image) {
+    background-size: cover !important;
   }
 }
 </style>

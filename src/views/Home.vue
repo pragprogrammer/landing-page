@@ -150,8 +150,16 @@ export default {
     $(window).scroll(function() {
       $(".arrow").css("opacity", 1 - $(window).scrollTop() / 250);
     });
+
+    $(window).ready(function() {
+      if ($(window).scrollTop() == 0) {
+        $(".backtotop").css("display", "none");
+      }
+    });
+
     $(window).scroll(function() {
       $(".btop").css("opacity", 0 + $(window).scrollTop() / 250);
+      $(".backtotop").css("display", "block");
     });
   }
 };
