@@ -449,10 +449,11 @@ a:not([href]):not([tabindex]) {
 
 .img-holder {
   height: 100%;
-  width: 30%;
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 5rem;
 }
 
 .bio {
@@ -461,7 +462,7 @@ a:not([href]):not([tabindex]) {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 70%;
+  width: 60%;
 }
 
 .bio-img {
@@ -591,6 +592,7 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 4rem;
   }
   .bio-img {
     height: 13rem;
