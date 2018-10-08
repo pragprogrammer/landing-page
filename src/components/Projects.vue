@@ -20,16 +20,16 @@ export default {
     return {
       items: [
         {
-          src: "../assets/bullutinfullscreen.png"
+          src: "../assets/bullutinfullscreen.PNG"
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg"
+          src: "../assets/battle-cards.PNG"
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg"
+          src: "../assets/usingmusic.PNG"
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg"
+          src: "../assets/kanban.PNG"
         }
       ]
     };
