@@ -20,16 +20,16 @@ export default {
     return {
       items: [
         {
-          src: "@/assets/bullutinfullscreen.png"
+          src: "../assets/bullutinfullscreen.png"
         },
         {
-          src: "@/assets/battle-cards.png"
+          src: "../assets/battle-cards.png"
         },
         {
-          src: "@/assets/usingmusic.png"
+          src: "../assets/usingmusic.png"
         },
         {
-          src: "@/assets/kanban.png"
+          src: "../assets/kanban.png"
         }
       ]
     };
