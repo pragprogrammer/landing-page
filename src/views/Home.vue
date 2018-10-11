@@ -32,7 +32,7 @@
                 <a class="dropdown-item" href="https://www.linkedin.com/in/michael-green-756841b9/" target="_blank"><i
                     class="fab fa-linkedin"></i> LinkedIn</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://docs.google.com/document/d/1JFKnWHeaH96eqi0OkCwS_i0KjpMfLubLJ6NmRUUMNus/edit"
+                <a class="dropdown-item" href="https://docs.google.com/document/d/1T_bnSTBSMuqXus-XEoQ8r_RuVhHkkppCqiusgliMOXc/edit?usp=sharing"
                   target="_blank"><i class="fas fa-file"></i> Resume</a>
               </div>
             </li>
@@ -43,7 +43,7 @@
     <div id="top"></div>
     <div class="inspirational">
       <div class="ins-content">
-        <p>I'm Michael Green, a<br><strong class="special-text">Full Stack Developer</strong><br>I builds things on the
+        <p>I'm Michael Green, a<br><strong class="special-text">Full Stack Developer</strong><br>I build things on the
           Internet</p>
       </div>
       <div class="ska">
@@ -87,13 +87,13 @@
         <div class="bio">
           <div class="biotext">
             <p>
-              I'm a Software Developer with over 500 hours of front and back-end development from Boise Codeworks
-              immersed bootcamp.
-              I have A knack for problem solving, and the ability to think outside of the box. <br /> <br /> My passion
-              for
-              technology led to a career in software development after years of customer service and construction
-              experience.
+              I'm a Software Developer with over 500 hours of development experience from Boise Codeworks
+              immersed bootcamp, and my own projects.
+              I have A knack for problem solving, and the ability to think outside of the box. <br /> 
+              <br /> 
               I'm a highly motivated developer with strong front & back-end development skills.
+              My passion for technology led to a career in software development. After years of customer service and construction experience,
+              I developed strong time management and multi-tasking skills.
             </p>
           </div>
         </div>
