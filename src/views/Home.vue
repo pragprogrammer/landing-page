@@ -83,13 +83,14 @@
         <div class="img-holder">
           <div class="bio-img">
           </div>
-          </div>
+        </div>
         <div class="bio">
           <div class="biotext">
             <p>
               I'm a Software Developer with over 500 hours of front and back-end development from Boise Codeworks
               immersed bootcamp.
-              I have A knack for problem solving, and the ability to think outside of the box. <br/> <br/> My passion for
+              I have A knack for problem solving, and the ability to think outside of the box. <br /> <br /> My passion
+              for
               technology led to a career in software development after years of customer service and construction
               experience.
               I'm a highly motivated developer with strong front & back-end development skills.
@@ -106,19 +107,24 @@
         </div>
       </div>
       <div class="contact-body">
-        <div class="contact-me">
-            <form method="POST" class="contact-form" :action="formSpreeTarget">
-                <input type="text" placeholder="NAME" name="name"/>
-                <input type="text" placeholder="YOUR EMAIL" name="_replyto">
-                <input type="text" placeholder="SUBJECT" name="subject" required />
-                <textarea type="text" placeholder="CONTENT" name="content" required></textarea>
-                <button type="submit" class="form-button">SEND</button>
-            </form>
-        </div>
+        <v-card dark width="45rem">
+          <v-container>
+            <v-card flat>
+              <form method="POST" :action="formSpreeTarget" ref="form">
+                <v-text-field clearable v-model="emailform.name" prepend-inner-icon="far fa-user" label="Name" name="name" required></v-text-field>
+                <v-text-field clearable v-model="emailform.email" prepend-inner-icon="far fa-envelope" label="E-mail" name="_replyto" required></v-text-field>
+                <v-text-field clearable v-model="emailform.subject" prepend-inner-icon="fas fa-pencil-alt" label="Subject" name="subject" required></v-text-field>
+                <v-textarea clearable v-model="emailform.content" height="7rem" outline name="content" required></v-textarea>
+                <v-btn type="submit">Submit</v-btn>
+                <v-btn @click="clear">clear</v-btn>
+              </form>
+            </v-card>
+          </v-container>
+        </v-card>
       </div>
-        <div class="backtotop">
-          <a class="nav-link btop" data-scroll="#top"><i class="fas fa-angle-double-up"></i></a>
-        </div>
+      <div class="backtotop">
+        <a class="nav-link btop" data-scroll="#top"><i class="fas fa-angle-double-up"></i></a>
+      </div>
       <div class="contact-footer">
         <p>© 2018 Michael L. Green</p>
       </div>
@@ -133,13 +139,29 @@ export default {
   name: "home",
   data() {
     return {
-      formSpreeTarget: "https://formspree.io/michael.green94@hotmail.com"
+      formSpreeTarget: "https://formspree.io/michael.green94@hotmail.com",
+      // valid: false,
+      emailform: {
+        name: "",
+        email: "",
+        subject: "",
+        content: ""
+      }
     };
   },
   components: {
     Projects
   },
-  methods: {},
+  methods: {
+    submit() {
+      if (this.$refs.form.validate()) {
+        return (this.valid = true);
+      }
+    },
+    clear() {
+      this.$refs.form.reset();
+    }
+  },
   mounted() {
     document.querySelectorAll(".nav-link").forEach(a => {
       a.addEventListener("click", () =>
@@ -162,7 +184,8 @@ export default {
       $(".btop").css("opacity", 0 + $(window).scrollTop() / 250);
       $(".backtotop").css("display", "block");
     });
-  }
+  },
+  computed: {}
 };
 </script>
 
@@ -510,15 +533,15 @@ a:not([href]):not([tabindex]) {
   align-items: center;
 }
 
-.contact-me {
+/* .contact-me {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70%;
   width: 70%;
-  /* background-color: #f5f5f5; */
+  background-color: #f5f5f5;
   color: black;
-}
+} */
 
 .contact-form {
   display: flex;
@@ -581,10 +604,12 @@ textarea {
   .skill-icons {
     font-size: 8rem;
   }
+
   .inspirational {
     font-size: 1.5rem;
     height: 100vh;
   }
+
   .img-holder {
     height: 40%;
     width: 100%;
@@ -592,29 +617,36 @@ textarea {
     justify-content: center;
     align-items: center;
   }
+
   .bio-img {
     height: 13rem;
     width: 13rem;
   }
+
   .bio {
     height: 55%;
     width: 100%;
   }
+
   .biotext {
     height: 100%;
     width: 90%;
     font-size: 1.1rem;
     font-family: "Roboto", sans-serif;
   }
+
   #skills {
     height: 100vh;
   }
+
   #about {
     height: 100vh;
   }
+
   p {
     padding-bottom: 0;
   }
+
   .backtotop {
     bottom: 2rem;
     right: 2rem;
