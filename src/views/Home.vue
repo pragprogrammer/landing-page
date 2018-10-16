@@ -87,13 +87,12 @@
         <div class="bio">
           <div class="biotext">
             <p>
-              I'm a Software Developer with over 500 hours of development experience from Boise Codeworks
-              immersed bootcamp, and my own projects.
+              Junior Software Developer with experience in front and back-end technologies learned from Boise Codeworks
+              bootcamp, and building my own projects.
               I have A knack for problem solving, and the ability to think outside of the box. <br /> 
               <br /> 
-              I'm a highly motivated developer with strong front & back-end development skills.
-              My passion for technology led to a career in software development. After years of customer service and construction experience,
-              I developed strong time management and multi-tasking skills.
+              I'm a highly motivated developer with a passion for technology that led to a career in software development, from Structural Welding,
+              where I developed strong time management and multi-tasking skills.
             </p>
           </div>
         </div>

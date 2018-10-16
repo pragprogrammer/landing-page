@@ -7,7 +7,13 @@
     </div>
     <div class="carousel">
           <v-carousel hide-delimiters interval=60000 light>
-              <v-carousel-item v-for="(item,i) in items" :key="i" :href="item[i].link" :src="item.src"></v-carousel-item>
+              <v-carousel-item v-for="(item,i) in items" :key="i">
+                <div class="projlink" >
+                  <a :href="item.link">
+                  <img :src="item.src" class="projimg"/>
+                  </a>
+                </div>
+              </v-carousel-item>
       </v-carousel>
     </div>
   </div>
@@ -20,18 +26,22 @@ export default {
     return {
       items: [
         {
+          // src: "../assets/bullutinfullscreen.png",
           src: "/landing-page/img/bullutinfullscreen.png",
           link: "https://bullutin.herokuapp.com/#/"
         },
         {
+          // src: "../assets/battle-cards.png",
           src: "/landing-page/img/battle-cards.png",
           link: "https://michaelgreen94.github.io/battle-cards/"
         },
         {
+          // src: "../assets/usingmusic.png",
           src: "/landing-page/img/usingmusic.png",
           link: "https://michaelgreen94.github.io/Music-Is-Fun/"
         },
         {
+          // src: "../assets/kanban.png",
           src: "/landing-page/img/kanban.png",
           link: "https://cmcarlsonkanban.herokuapp.com/#/login"
         }
@@ -47,6 +57,21 @@ p {
   margin-bottom: 0;
 }
 
+.projimg {
+  object-fit: cover;
+  object-position: center;
+  height: 70vh;
+  width: 100%;
+}
+
+.projlink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  cursor: pointer;
+}
+
 #projects {
   height: 70vh;
   width: 100%;
@@ -55,7 +80,7 @@ p {
   display: flex;
 }
 .v-carousel {
-  height: inherit;
+  height: 65vh !important;
   width: 85%;
   display: flex;
   justify-content: center;
@@ -81,9 +106,9 @@ p {
   width: 80% !important;
 }
 
-:global(.v-image__image) {
+/* :global(.v-image__image) {
   background-size: contain !important;
-}
+} */
 
 .projectsheader {
   height: 100%;
@@ -124,6 +149,9 @@ p {
   }
   .v-carousel__item {
     width: 90% !important;
+  }
+  .v-carousel {
+    height: 70vh !important;
   }
 
   :global(.v-image__image) {
