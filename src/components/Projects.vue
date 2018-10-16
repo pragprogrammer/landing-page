@@ -7,7 +7,7 @@
     </div>
     <div class="carousel">
           <v-carousel hide-delimiters interval=60000 light>
-              <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
+              <v-carousel-item v-for="(item,i) in items" :key="i" :href="item[i].link" :src="item.src"></v-carousel-item>
       </v-carousel>
     </div>
   </div>
@@ -20,16 +20,20 @@ export default {
     return {
       items: [
         {
-          src: "/landing-page/img/bullutinfullscreen.png"
+          src: "/landing-page/img/bullutinfullscreen.png",
+          link: "https://bullutin.herokuapp.com/#/"
         },
         {
-          src: "/landing-page/img/battle-cards.png"
+          src: "/landing-page/img/battle-cards.png",
+          link: "https://michaelgreen94.github.io/battle-cards/"
         },
         {
-          src: "/landing-page/img/usingmusic.png"
+          src: "/landing-page/img/usingmusic.png",
+          link: "https://michaelgreen94.github.io/Music-Is-Fun/"
         },
         {
-          src: "/landing-page/img/kanban.png"
+          src: "/landing-page/img/kanban.png",
+          link: "https://cmcarlsonkanban.herokuapp.com/#/login"
         }
       ]
     };

@@ -113,7 +113,7 @@
                 <input v-model="email.subject" type="text" placeholder="SUBJECT" name="subject" required />
                 <textarea v-model="email.content" type="text" placeholder="CONTENT" name="content" required></textarea>
                 <!-- <button type="submit" class="form-button">SEND</button> -->
-                <v-layout justify-space-around="">
+                <v-layout justify-space-between="">
                 <v-btn type="submit">Send</v-btn>
                 <v-btn @click="clear">Clear</v-btn>
                 </v-layout>
