@@ -108,11 +108,15 @@
       <div class="contact-body">
         <div class="contact-me">
             <form method="POST" class="contact-form" :action="formSpreeTarget">
-                <input type="text" placeholder="NAME" name="name"/>
-                <input type="text" placeholder="YOUR EMAIL" name="_replyto">
-                <input type="text" placeholder="SUBJECT" name="subject" required />
-                <textarea type="text" placeholder="CONTENT" name="content" required></textarea>
-                <button type="submit" class="form-button">SEND</button>
+                <input v-model="email.name" type="text" placeholder="NAME" name="name"/>
+                <input v-model="email.email" type="text" placeholder="YOUR EMAIL" name="_replyto">
+                <input v-model="email.subject" type="text" placeholder="SUBJECT" name="subject" required />
+                <textarea v-model="email.content" type="text" placeholder="CONTENT" name="content" required></textarea>
+                <!-- <button type="submit" class="form-button">SEND</button> -->
+                <v-layout justify-space-around="">
+                <v-btn type="submit">Send</v-btn>
+                <v-btn @click="clear">Clear</v-btn>
+                </v-layout>
             </form>
         </div>
       </div>
@@ -133,13 +137,26 @@ export default {
   name: "home",
   data() {
     return {
-      formSpreeTarget: "https://formspree.io/michael.green94@hotmail.com"
+      formSpreeTarget: "https://formspree.io/michael.green94@hotmail.com",
+      email: {
+        name: "",
+        email: "",
+        subject: "",
+        content: ""
+      }
     };
   },
   components: {
     Projects
   },
-  methods: {},
+  methods: {
+    clear() {
+      this.email.name = "";
+      this.email.email = "";
+      this.email.subject = "";
+      this.email.content = "";
+    }
+  },
   mounted() {
     document.querySelectorAll(".nav-link").forEach(a => {
       a.addEventListener("click", () =>
