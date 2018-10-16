@@ -32,7 +32,7 @@
                 <a class="dropdown-item" href="https://www.linkedin.com/in/michael-green-756841b9/" target="_blank"><i
                     class="fab fa-linkedin"></i> LinkedIn</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://docs.google.com/document/d/1JFKnWHeaH96eqi0OkCwS_i0KjpMfLubLJ6NmRUUMNus/edit"
+                <a class="dropdown-item" href="https://docs.google.com/document/d/1T_bnSTBSMuqXus-XEoQ8r_RuVhHkkppCqiusgliMOXc/edit?usp=sharing"
                   target="_blank"><i class="fas fa-file"></i> Resume</a>
               </div>
             </li>
@@ -43,7 +43,7 @@
     <div id="top"></div>
     <div class="inspirational">
       <div class="ins-content">
-        <p>I'm Michael Green, a<br><strong class="special-text">Full Stack Developer</strong><br>I builds things on the
+        <p>I'm Michael Green, a<br><strong class="special-text">Full Stack Developer</strong><br>I build things on the
           Internet</p>
       </div>
       <div class="ska">
@@ -83,16 +83,17 @@
         <div class="img-holder">
           <div class="bio-img">
           </div>
-          </div>
+        </div>
         <div class="bio">
           <div class="biotext">
             <p>
-              I'm a Software Developer with over 500 hours of front and back-end development from Boise Codeworks
-              immersed bootcamp.
-              I have A knack for problem solving, and the ability to think outside of the box. <br/> <br/> My passion for
-              technology led to a career in software development after years of customer service and construction
-              experience.
+              I'm a Software Developer with over 500 hours of development experience from Boise Codeworks
+              immersed bootcamp, and my own projects.
+              I have A knack for problem solving, and the ability to think outside of the box. <br /> 
+              <br /> 
               I'm a highly motivated developer with strong front & back-end development skills.
+              My passion for technology led to a career in software development. After years of customer service and construction experience,
+              I developed strong time management and multi-tasking skills.
             </p>
           </div>
         </div>
@@ -106,23 +107,24 @@
         </div>
       </div>
       <div class="contact-body">
-        <div class="contact-me">
-            <form method="POST" class="contact-form" :action="formSpreeTarget">
-                <input v-model="email.name" type="text" placeholder="NAME" name="name"/>
-                <input v-model="email.email" type="text" placeholder="YOUR EMAIL" name="_replyto">
-                <input v-model="email.subject" type="text" placeholder="SUBJECT" name="subject" required />
-                <textarea v-model="email.content" type="text" placeholder="CONTENT" name="content" required></textarea>
-                <!-- <button type="submit" class="form-button">SEND</button> -->
-                <v-layout justify-space-between="">
-                <v-btn type="submit">Send</v-btn>
-                <v-btn @click="clear">Clear</v-btn>
-                </v-layout>
-            </form>
-        </div>
+        <v-card dark width="45rem">
+          <v-container>
+            <v-card flat>
+              <form method="POST" :action="formSpreeTarget" ref="form">
+                <v-text-field clearable v-model="emailform.name" prepend-inner-icon="far fa-user" label="Name" name="name" required></v-text-field>
+                <v-text-field clearable v-model="emailform.email" prepend-inner-icon="far fa-envelope" label="E-mail" name="_replyto" required></v-text-field>
+                <v-text-field clearable v-model="emailform.subject" prepend-inner-icon="fas fa-pencil-alt" label="Subject" name="subject" required></v-text-field>
+                <v-textarea clearable v-model="emailform.content" height="7rem" outline name="content" required></v-textarea>
+                <v-btn type="submit">Submit</v-btn>
+                <v-btn @click="clear">clear</v-btn>
+              </form>
+            </v-card>
+          </v-container>
+        </v-card>
       </div>
-        <div class="backtotop">
-          <a class="nav-link btop" data-scroll="#top"><i class="fas fa-angle-double-up"></i></a>
-        </div>
+      <div class="backtotop">
+        <a class="nav-link btop" data-scroll="#top"><i class="fas fa-angle-double-up"></i></a>
+      </div>
       <div class="contact-footer">
         <p>© 2018 Michael L. Green</p>
       </div>
@@ -138,7 +140,7 @@ export default {
   data() {
     return {
       formSpreeTarget: "https://formspree.io/michael.green94@hotmail.com",
-      email: {
+      emailform: {
         name: "",
         email: "",
         subject: "",
@@ -150,11 +152,16 @@ export default {
     Projects
   },
   methods: {
+    submit() {
+      if (this.$refs.form.validate()) {
+        return (this.valid = true);
+      }
+    },
     clear() {
-      this.email.name = "";
-      this.email.email = "";
-      this.email.subject = "";
-      this.email.content = "";
+      this.emailform.name = "";
+      this.emailform.email = "";
+      this.emailform.subject = "";
+      this.emailform.content = "";
     }
   },
   mounted() {
@@ -179,7 +186,8 @@ export default {
       $(".btop").css("opacity", 0 + $(window).scrollTop() / 250);
       $(".backtotop").css("display", "block");
     });
-  }
+  },
+  computed: {}
 };
 </script>
 
@@ -527,15 +535,15 @@ a:not([href]):not([tabindex]) {
   align-items: center;
 }
 
-.contact-me {
+/* .contact-me {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70%;
   width: 70%;
-  /* background-color: #f5f5f5; */
+  background-color: #f5f5f5;
   color: black;
-}
+} */
 
 .contact-form {
   display: flex;
@@ -598,10 +606,12 @@ textarea {
   .skill-icons {
     font-size: 8rem;
   }
+
   .inspirational {
     font-size: 1.5rem;
     height: 100vh;
   }
+
   .img-holder {
     height: 40%;
     width: 100%;
@@ -609,29 +619,36 @@ textarea {
     justify-content: center;
     align-items: center;
   }
+
   .bio-img {
     height: 13rem;
     width: 13rem;
   }
+
   .bio {
     height: 55%;
     width: 100%;
   }
+
   .biotext {
     height: 100%;
     width: 90%;
     font-size: 1.1rem;
     font-family: "Roboto", sans-serif;
   }
+
   #skills {
     height: 100vh;
   }
+
   #about {
     height: 100vh;
   }
+
   p {
     padding-bottom: 0;
   }
+
   .backtotop {
     bottom: 2rem;
     right: 2rem;
