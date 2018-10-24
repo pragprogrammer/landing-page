@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build && cp src/assets/* docs/img/"
   },
   "dependencies": {
     "vue": "^2.5.17",
