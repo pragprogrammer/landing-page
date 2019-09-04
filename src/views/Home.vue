@@ -32,7 +32,7 @@
                 <a class="dropdown-item" href="https://www.linkedin.com/in/michael-green-756841b9/" target="_blank"><i
                     class="fab fa-linkedin"></i> LinkedIn</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="https://docs.google.com/document/d/1T_bnSTBSMuqXus-XEoQ8r_RuVhHkkppCqiusgliMOXc/edit?usp=sharing"
+                <a class="dropdown-item" href="https://docs.google.com/document/d/1wEs_6VyG_PIgQZTsrxDsH4a2NkbwgkIqj2l_o26kQVM/edit?usp=sharing"
                   target="_blank"><i class="fas fa-file"></i> Resume</a>
               </div>
             </li>
